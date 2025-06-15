@@ -1,6 +1,27 @@
+
 def non_winners(races):
-    # Write your solution here!
-    pass
+    winners = set()
+    loosers = set()
+
+    for value in races.values():
+        winners.add(value[0])
+        loosers.add(value[1])
+        loosers.add(value[2])
+    
+    for winner in winners:
+        if winner in loosers:
+            loosers.remove(winner)
+
+    return loosers
+
+    
+print(non_winners({
+    "Suzuka": ("Tsunoda", "Latifi", "Stroll"),
+    "Mexico City": ("Pérez", "Hamilton", "Tsunoda"),
+    "Silverstone": ("Hamilton", "Latifi", "Tsunoda")
+}))
+
+
 
 
 races_1 = {
