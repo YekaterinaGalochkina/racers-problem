@@ -14,6 +14,9 @@ def non_winners(races):
 
     return loosers
 
+# Time complexity:  O(R) - R = number of races
+# Space complexity: O(R)
+
     
 print(non_winners({
     "Suzuka": ("Tsunoda", "Latifi", "Stroll"),
